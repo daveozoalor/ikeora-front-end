@@ -9,7 +9,7 @@ body {
   box-shadow: 0 3px 10px #000;
 }
 .navbar .navbar-brand {
-  padding: 6px;
+  padding: 7px;
   padding-right: 14px;
   color: black;
   text-transform: uppercase;
@@ -17,7 +17,7 @@ body {
   letter-spacing: 2px;
 }
 .navbar .navbar-brand img {
-  max-height: 40px;
+  max-height: 38px;
 }
 .navbar .navbar-nav > li > a {
   color: black;
@@ -40,6 +40,11 @@ header.jumbotron {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+header.jumbotron h1 {
+  color: white;
+}
+header.jumbotron a {
   color: white;
 }
 /**
