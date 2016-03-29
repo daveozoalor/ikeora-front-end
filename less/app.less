@@ -1,8 +1,11 @@
-@green: green;
-
 /**
- * Overrides
+ * General
  */
+ @green: green;
+ @screen-sm-min: 768px;
+ @project-padding: 10px;
+ @project-height: 250px;
+
 .btn {
     border-radius: 0;
 }
@@ -68,11 +71,49 @@ header.jumbotron {
 }
 
 /**
+ * Nigerian Business styling
+ */
+.business-spacing {
+    margin: 30px auto;
+    height: 300px;
+}
+
+.business-img-bg {
+    background-color: #555;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.business-bg {
+    .business-spacing;
+    .business-img-bg;
+    background-image: url('../img/nigerian-business.png');
+}
+
+.business-caption {
+    .business-spacing;
+    display: table;
+    background: #eee;
+    padding: 30px;
+
+    @media (max-width: @screen-sm-min) {
+        .business-img-bg;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/nigerian-business.png');
+        text-align: center;
+        color: white;
+    }
+
+    & > div {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+/**
  * Featured Projects styling
  */
- @screen-sm-min: 768px;
- @project-padding: 10px;
- @project-height: 250px;
+
 
 .project-cell {
     padding-bottom: @project-padding;

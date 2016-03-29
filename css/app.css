@@ -1,5 +1,5 @@
 /**
- * Overrides
+ * General
  */
 .btn {
   border-radius: 0;
@@ -52,6 +52,50 @@ header.jumbotron h1 {
 }
 header.jumbotron a {
   color: white;
+}
+/**
+ * Nigerian Business styling
+ */
+.business-spacing {
+  margin: 30px auto;
+  height: 300px;
+}
+.business-img-bg {
+  background-color: #555;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.business-bg {
+  margin: 30px auto;
+  height: 300px;
+  background-color: #555;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/nigerian-business.png');
+}
+.business-caption {
+  margin: 30px auto;
+  height: 300px;
+  display: table;
+  background: #eee;
+  padding: 30px;
+}
+@media (max-width: 768px) {
+  .business-caption {
+    background-color: #555;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/nigerian-business.png');
+    text-align: center;
+    color: white;
+  }
+}
+.business-caption > div {
+  display: table-cell;
+  vertical-align: middle;
 }
 /**
  * Featured Projects styling
