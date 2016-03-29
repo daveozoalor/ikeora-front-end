@@ -1,3 +1,6 @@
+/**
+ * Navbar styling
+ */
 .navbar {
   margin-bottom: 0;
 }
@@ -8,7 +11,10 @@
 .navbar .navbar-brand img {
   max-height: 40px;
 }
-.header {
+/**
+ * Header styling
+ */
+header.jumbotron {
   padding: 150px 0;
   background-color: #555;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('../img/header.png');
@@ -16,4 +22,84 @@
   background-position: center;
   background-size: cover;
   color: white;
+}
+/**
+ * Featured Projects styling
+ */
+.project-cell {
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .project-cell {
+    padding-top: 10px;
+  }
+}
+.project-height-1 {
+  display: table;
+  height: 250px;
+  width: 100%;
+  padding-bottom: 12px;
+  padding-left: 26px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.project-height-2 {
+  display: table;
+  height: 250px;
+  width: 100%;
+  padding-bottom: 12px;
+  padding-left: 26px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .project-height-2 {
+    height: 520px;
+  }
+}
+.project-text {
+  display: table-cell;
+  vertical-align: bottom;
+}
+/**
+ * Mixins for individual project styling
+ */
+.img-project {
+  color: white;
+}
+.blank-project {
+  border: 1px solid black;
+}
+/**
+ * Individual project styling
+ */
+#project-1 {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/project-1.png');
+}
+#project-2 {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/project-2.png');
+}
+#project-3 {
+  border: 1px solid black;
+}
+#project-4 {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/project-4.png');
+}
+#project-5 {
+  border: 1px solid black;
+}
+#project-6 {
+  border: 1px solid black;
+}
+#project-7 {
+  border: 1px solid black;
 }

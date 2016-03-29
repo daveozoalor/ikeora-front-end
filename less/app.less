@@ -1,3 +1,6 @@
+/**
+ * Navbar styling
+ */
 .navbar {
     margin-bottom: 0;
 
@@ -10,7 +13,10 @@
     }
 }
 
-.header {
+/**
+ * Header styling
+ */
+header.jumbotron {
     padding: 150px 0;
     background-color: #555;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('../img/header.png');
@@ -19,5 +25,89 @@
     background-size: cover;
 
     color: white;
+}
 
+/**
+ * Featured Projects styling
+ */
+ @screen-sm-min: 768px;
+ @project-padding: 10px;
+ @project-height: 250px;
+
+.project-cell {
+    padding-bottom: @project-padding;
+    padding-left: @project-padding;
+    padding-right: @project-padding;
+    @media (min-width: @screen-sm-min) {
+        padding-top: @project-padding;
+    }
+}
+
+.project-height-1 {
+    display: table;
+    height: @project-height;
+    width: 100%;
+    padding-bottom: 12px;
+    padding-left: 26px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.project-height-2 {
+    .project-height-1;
+    @media (min-width: @screen-sm-min) {
+        height: 2 * @project-height + 2 * @project-padding;
+    }
+}
+
+.project-text {
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+/**
+ * Mixins for individual project styling
+ */
+.img-project {
+    color: white;
+}
+
+.blank-project {
+    border: 1px solid black;
+}
+
+/**
+ * Individual project styling
+ */
+#project-1 {
+    .img-project;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/project-1.png');
+}
+
+#project-2 {
+    .img-project;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/project-2.png');
+}
+
+#project-3 {
+    .blank-project;
+}
+
+#project-4 {
+    .img-project;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/project-4.png');
+}
+
+#project-5 {
+    .blank-project;
+}
+
+#project-6 {
+    .blank-project;
+}
+
+#project-7 {
+    .blank-project;
 }
