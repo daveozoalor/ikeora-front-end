@@ -24,6 +24,9 @@ body {
   text-transform: uppercase;
   font-weight: bold;
 }
+.navbar .navbar-nav > li > a:hover {
+  background-color: #eee;
+}
 .navbar .navbar-nav > li.current > a {
   color: green;
 }
