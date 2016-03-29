@@ -1,15 +1,31 @@
 /**
  * Navbar styling
  */
+body {
+  padding-top: 50px;
+}
 .navbar {
   margin-bottom: 0;
+  box-shadow: 0 3px 10px #000;
 }
 .navbar .navbar-brand {
   padding: 6px;
   padding-right: 14px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 .navbar .navbar-brand img {
   max-height: 40px;
+}
+.navbar .navbar-nav > li > a {
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.navbar .navbar-nav > li.current > a {
+  color: green;
 }
 /**
  * Header styling
