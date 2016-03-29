@@ -1,4 +1,10 @@
 /**
+ * Overrides
+ */
+.btn {
+  border-radius: 0;
+}
+/**
  * Navbar styling
  */
 body {
@@ -70,6 +76,11 @@ header.jumbotron a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.project-height-1:hover {
+  transform: scale(1.03);
 }
 .project-height-2 {
   display: table;
@@ -81,6 +92,11 @@ header.jumbotron a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.project-height-2:hover {
+  transform: scale(1.03);
 }
 @media (min-width: 768px) {
   .project-height-2 {
