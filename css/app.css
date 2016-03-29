@@ -103,3 +103,14 @@ header.jumbotron {
 #project-7 {
   border: 1px solid black;
 }
+/**
+ * Footer Styling
+ */
+footer.jumbotron {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  background: black;
+  color: white;
+}
