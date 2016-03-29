@@ -107,10 +107,14 @@ header.jumbotron {
  * Footer Styling
  */
 footer.jumbotron {
-  margin-top: 10px;
   margin-bottom: 0;
   padding-top: 70px;
   padding-bottom: 50px;
   background: black;
   color: white;
+}
+@media (min-width: 768px) {
+  footer.jumbotron {
+    margin-top: 10px;
+  }
 }
