@@ -1,3 +1,5 @@
+@green: green;
+
 /**
  * Navbar styling
  */
@@ -29,7 +31,7 @@ body {
         }
 
         &.current > a {
-            color: green;
+            color: @green;
         }
     }
 }
@@ -144,5 +146,24 @@ footer.jumbotron {
     padding-top: 70px;
     padding-bottom: 50px;
     background: black;
-    color: white;
+
+    h4 {
+        text-transform: uppercase;
+        color: white;
+    }
+
+    p {
+        font-size: 12px;
+        color: white;
+    }
+
+    li {
+        padding-bottom: 4px;
+
+        & > a {
+            color: @green;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
 }
