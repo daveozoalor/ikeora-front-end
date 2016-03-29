@@ -202,6 +202,11 @@ header.jumbotron {
 /**
  * Footer Styling
  */
+.center-on-mobile {
+    @media (max-width: @screen-sm-min) {
+        text-align: center;
+    }
+}
 footer.jumbotron {
     @media (min-width: @screen-sm-min) {
         margin-top: @project-padding;
@@ -214,15 +219,18 @@ footer.jumbotron {
     h4 {
         text-transform: uppercase;
         color: white;
+        .center-on-mobile;
     }
 
     p {
         font-size: 12px;
         color: white;
+        .center-on-mobile;
     }
 
     li {
         padding-bottom: 4px;
+        .center-on-mobile;
 
         & > a {
             color: @green;
