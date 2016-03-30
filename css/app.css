@@ -297,6 +297,11 @@ footer.jumbotron li > a {
 .dashboard-menu .nav li.active > a:hover {
   color: black;
 }
-.dashboard-menu .nav .last {
+.dashboard-menu .nav li.last {
   padding-bottom: 20px;
+}
+.dashboard-menu .nav i.fade-on-hover {
+  position: relative;
+  opacity: 0;
+  left: 4px;
 }
