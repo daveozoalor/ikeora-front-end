@@ -1,12 +1,12 @@
 /**
- * General
- */
+* General
+*/
 .btn {
   border-radius: 0;
 }
 /**
- * Navbar styling
- */
+* Navbar styling
+*/
 body {
   padding-top: 50px;
 }
@@ -37,8 +37,8 @@ body {
   color: green;
 }
 /**
- * Header styling
- */
+* Header styling
+*/
 header.jumbotron {
   padding: 150px 0;
   background-color: #555;
@@ -54,8 +54,8 @@ header.jumbotron a {
   color: white;
 }
 /**
- * Nigerian Business styling
- */
+* Nigerian Business styling
+*/
 .business-spacing {
   margin: 30px auto;
   height: 300px;
@@ -98,8 +98,8 @@ header.jumbotron a {
   vertical-align: middle;
 }
 /**
- * Featured Projects styling
- */
+* Featured Projects styling
+*/
 .project-cell {
   padding-bottom: 10px;
   padding-left: 10px;
@@ -152,8 +152,8 @@ header.jumbotron a {
   vertical-align: bottom;
 }
 /**
- * Mixins for individual project styling
- */
+* Mixins for individual project styling
+*/
 .img-project {
   color: white;
 }
@@ -161,8 +161,8 @@ header.jumbotron a {
   border: 1px solid black;
 }
 /**
- * Individual project styling
- */
+* Individual project styling
+*/
 #project-1 {
   color: white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/project-1.png');
@@ -188,8 +188,8 @@ header.jumbotron a {
   border: 1px solid black;
 }
 /**
- * Footer Styling
- */
+* Footer Styling
+*/
 @media (max-width: 768px) {
   .center-on-mobile {
     text-align: center;
@@ -238,8 +238,8 @@ footer.jumbotron li > a {
   font-weight: bold;
 }
 /**
- * Raised body
- */
+* Raised body
+*/
 .background {
   background-color: #ccc;
   margin-bottom: -10px;
@@ -252,4 +252,51 @@ footer.jumbotron li > a {
   .background .raised {
     margin: 50px auto;
   }
+}
+/**
+* Dashboard menu
+*/
+.dashboard-menu {
+  background: #eee;
+  padding: 0;
+}
+.dashboard-menu img {
+  border: 8px solid green;
+  margin-top: 25px;
+}
+.dashboard-menu h3 {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.dashboard-menu .nav li:not(.active):after {
+  content: "";
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  height: 2px;
+  left: 5%;
+  width: 90%;
+}
+.dashboard-menu .nav li.active + li:after {
+  height: 0;
+}
+.dashboard-menu .nav li > a {
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+  padding: 30px;
+  border-radius: 0;
+  transition: all 0.2s ease-in-out;
+}
+.dashboard-menu .nav li.active > a {
+  background: #fff;
+  border-radius: 0;
+  border-left: 8px solid green;
+}
+.dashboard-menu .nav li.active > a:hover {
+  color: black;
+}
+.dashboard-menu .nav .last {
+  padding-bottom: 20px;
 }

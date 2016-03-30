@@ -1,18 +1,18 @@
 /**
- * General
- */
- @green: green;
- @screen-sm-min: 768px;
- @project-padding: 10px;
- @project-height: 250px;
+* General
+*/
+@green: green;
+@screen-sm-min: 768px;
+@project-padding: 10px;
+@project-height: 250px;
 
 .btn {
     border-radius: 0;
 }
 
 /**
- * Navbar styling
- */
+* Navbar styling
+*/
 body {
     padding-top: 50px;
 }
@@ -51,8 +51,8 @@ body {
 }
 
 /**
- * Header styling
- */
+* Header styling
+*/
 header.jumbotron {
     padding: 150px 0;
     background-color: #555;
@@ -71,8 +71,8 @@ header.jumbotron {
 }
 
 /**
- * Nigerian Business styling
- */
+* Nigerian Business styling
+*/
 .business-spacing {
     margin: 30px auto;
     height: 300px;
@@ -111,8 +111,8 @@ header.jumbotron {
 }
 
 /**
- * Featured Projects styling
- */
+* Featured Projects styling
+*/
 
 
 .project-cell {
@@ -155,8 +155,8 @@ header.jumbotron {
 }
 
 /**
- * Mixins for individual project styling
- */
+* Mixins for individual project styling
+*/
 .img-project {
     color: white;
 }
@@ -166,8 +166,8 @@ header.jumbotron {
 }
 
 /**
- * Individual project styling
- */
+* Individual project styling
+*/
 #project-1 {
     .img-project;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/project-1.png');
@@ -200,8 +200,8 @@ header.jumbotron {
 }
 
 /**
- * Footer Styling
- */
+* Footer Styling
+*/
 .center-on-mobile {
     @media (max-width: @screen-sm-min) {
         text-align: center;
@@ -241,8 +241,8 @@ footer.jumbotron {
 }
 
 /**
- * Raised body
- */
+* Raised body
+*/
 .background {
     background-color: #ccc;
     margin-bottom: -1 * @project-padding; // Snug container to footer
@@ -253,5 +253,66 @@ footer.jumbotron {
             margin: 50px auto;
         }
         background: #fff;
+    }
+}
+
+/**
+* Dashboard menu
+*/
+.dashboard-menu {
+    background: #eee;
+    padding: 0;
+
+    img {
+        border: 8px solid @green;
+        margin-top: 25px;
+    }
+    h3 {
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .nav {
+        li:not(.active):after {
+            content:"";
+            background: #ccc;
+            position: absolute;
+            top: 0;
+            @border-width: 90%;
+            height: 2px;
+            left: (100% - @border-width) / 2;
+            width: @border-width;
+        }
+
+        li.active + li {
+            &:after {
+                height: 0;
+            }
+        }
+
+        li > a {
+            text-transform: uppercase;
+            color: black;
+            font-weight: bold;
+            padding: 30px;
+            border-radius: 0;
+            transition: all 0.2s ease-in-out;
+        }
+
+        li.active > a {
+            background: #fff;
+            border-radius: 0;
+            border-left: 8px solid @green;
+
+            &:hover {
+                // Override default link behaviour
+                color: black;
+            }
+        }
+
+        .last {
+            padding-bottom: 20px;
+        }
     }
 }
