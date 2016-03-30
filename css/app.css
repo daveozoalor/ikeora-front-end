@@ -237,3 +237,14 @@ footer.jumbotron li > a {
   text-transform: uppercase;
   font-weight: bold;
 }
+/**
+ * Raised body
+ */
+.background {
+  background-color: #ccc;
+  margin-bottom: -10px;
+}
+.background .raised {
+  margin: 70px auto;
+  background: #fff;
+}
