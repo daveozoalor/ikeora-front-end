@@ -5,6 +5,7 @@
 @screen-sm-min: 768px;
 @project-padding: 10px;
 @project-height: 250px;
+@nav-height: 50px;
 
 .btn {
     border-radius: 0;
@@ -14,7 +15,7 @@
 * Navbar styling
 */
 body {
-    padding-top: 50px;
+    padding-top: @nav-height;
 }
 
 .navbar {
@@ -47,6 +48,10 @@ body {
         &.current > a {
             color: @green;
         }
+    }
+
+    .navbar-text {
+        margin-left: 16px;
     }
 }
 
@@ -259,14 +264,31 @@ footer.jumbotron {
 /**
 * Dashboard menu
 */
+
+// This coupled with the *-bottom styles below
+// allow the grey colour to extend fully downward
+.row {
+    @media (min-width: @screen-sm-min) {
+        overflow: hidden;
+    }
+}
 .dashboard-menu {
     background: #eee;
     padding: 0;
 
+    @media (min-width: @screen-sm-min) {
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
+    }
+
+    // Achieves same effect as margin-top on
+    // image but avoids white margin bug
+    border-top: 25px solid #eee;
+
     img {
         border: 8px solid @green;
-        margin-top: 25px;
     }
+
     h3 {
         text-align: center;
         font-weight: bold;
@@ -311,14 +333,15 @@ footer.jumbotron {
             }
         }
 
-        li.last {
-            padding-bottom: 20px;
+        li.last:after {
+            @media (max-width: @screen-sm-min) {
+                height: 0px;
+            }
         }
 
         i.fade-on-hover {
             position: relative;
             opacity: 0;
-            left: 4px;
         }
     }
 }

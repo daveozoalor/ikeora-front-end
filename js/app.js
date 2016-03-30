@@ -1,22 +1,32 @@
-$(document).ready(function() {
-    // Hack to allow for full height while maintaining clearfix
-    $('.dashboard-menu').height($('.dashboard-body').height());
+var screen_sm_min = 768;
 
+$(document).ready(function() {
     // Fading chevrons on dashboard menu
+    var fadeDistance = '4px';
+    var fadeDuration = 300;
+    $('.nav li:not(.active) .fade-on-hover').css('left', fadeDistance);
     $('.nav li:not(.active)').hover(function() {
         $(this).find('.fade-on-hover').animate({
             left: '0px',
             opacity: '1'
-        }, 300);
+        }, fadeDuration);
     }, function() {
         $(this).find('.fade-on-hover').animate({
-            left: '4px',
+            left: fadeDistance,
             opacity: '0'
-        }, 300);
+        }, fadeDuration);
     }).click(function() {
         $(this).find('.fade-on-hover').animate({
-            left: '-4px',
+            left: '-' + fadeDistance,
             opacity: '0'
-        }, 300);
+        }, fadeDuration);
     });
+
+    $('.menu-toggle button').click(function() {
+        $(this).toggle();
+        $('.dashboard-body').toggle();
+        $('.dashboard-menu').animate({
+            left: '0px'
+        });
+    })
 });

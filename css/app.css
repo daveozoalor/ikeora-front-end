@@ -36,6 +36,9 @@ body {
 .navbar .navbar-nav > li.current > a {
   color: green;
 }
+.navbar .navbar-text {
+  margin-left: 16px;
+}
 /**
 * Header styling
 */
@@ -256,13 +259,24 @@ footer.jumbotron li > a {
 /**
 * Dashboard menu
 */
+@media (min-width: 768px) {
+  .row {
+    overflow: hidden;
+  }
+}
 .dashboard-menu {
   background: #eee;
   padding: 0;
+  border-top: 25px solid #eee;
+}
+@media (min-width: 768px) {
+  .dashboard-menu {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+  }
 }
 .dashboard-menu img {
   border: 8px solid green;
-  margin-top: 25px;
 }
 .dashboard-menu h3 {
   text-align: center;
@@ -297,11 +311,12 @@ footer.jumbotron li > a {
 .dashboard-menu .nav li.active > a:hover {
   color: black;
 }
-.dashboard-menu .nav li.last {
-  padding-bottom: 20px;
+@media (max-width: 768px) {
+  .dashboard-menu .nav li.last:after {
+    height: 0px;
+  }
 }
 .dashboard-menu .nav i.fade-on-hover {
   position: relative;
   opacity: 0;
-  left: 4px;
 }
