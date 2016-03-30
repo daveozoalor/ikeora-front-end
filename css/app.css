@@ -245,6 +245,11 @@ footer.jumbotron li > a {
   margin-bottom: -10px;
 }
 .background .raised {
-  margin: 70px auto;
+  margin: 20px auto;
   background: #fff;
+}
+@media (min-width: 768px) {
+  .background .raised {
+    margin: 50px auto;
+  }
 }

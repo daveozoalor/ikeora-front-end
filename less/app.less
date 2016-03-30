@@ -248,7 +248,10 @@ footer.jumbotron {
     margin-bottom: -1 * @project-padding; // Snug container to footer
 
     .raised {
-        margin: 70px auto;
+        margin: 20px auto;
+        @media (min-width: @screen-sm-min) {
+            margin: 50px auto;
+        }
         background: #fff;
     }
 }
