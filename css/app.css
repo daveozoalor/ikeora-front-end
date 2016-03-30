@@ -320,3 +320,21 @@ footer.jumbotron li > a {
   position: relative;
   opacity: 0;
 }
+.dashboard-body {
+  padding-top: 15px;
+}
+@media (min-width: 768px) {
+  .dashboard-body .search-bar {
+    width: auto;
+    float: right;
+    margin-top: 15px;
+  }
+}
+/**
+ * Placeholders
+ */
+.placeholder {
+  background: #888;
+  height: 200px;
+  margin-bottom: 10px;
+}
