@@ -22,8 +22,6 @@ body {
   padding: 7px;
   padding-right: 14px;
   color: black;
-  text-transform: uppercase;
-  font-weight: bold;
   letter-spacing: 2px;
 }
 .navbar .navbar-brand img {
@@ -31,8 +29,6 @@ body {
 }
 .navbar .navbar-nav > li > a {
   color: black;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 .navbar .navbar-nav > li > a:hover {
   background-color: #eee;
@@ -214,7 +210,6 @@ footer.jumbotron {
   }
 }
 footer.jumbotron h4 {
-  text-transform: uppercase;
   color: white;
 }
 @media (max-width: 768px) {
@@ -241,8 +236,6 @@ footer.jumbotron li {
 }
 footer.jumbotron li > a {
   color: green;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 /**
 * Raised body
@@ -285,8 +278,6 @@ footer.jumbotron li > a {
 }
 .dashboard-menu h3 {
   text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 .dashboard-menu .nav li:not(.active):after {
   content: "";
