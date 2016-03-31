@@ -4,6 +4,10 @@
 .btn {
   border-radius: 0;
 }
+.bold-caps {
+  font-weight: bold;
+  text-transform: uppercase;
+}
 /**
 * Navbar styling
 */
