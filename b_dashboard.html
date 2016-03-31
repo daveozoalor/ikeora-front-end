@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Home | Project Ikeora</title>
+    <title>Dashboard | Project Ikeora</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -60,110 +60,75 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right bold-caps">
-                    <li class="current"><a href="#">What We Do</a></li>
+                    <li><a href="#">What We Do</a></li>
                     <li><a href="#">Login <i class="fa fa-facebook-square fa-lg"></i></a></li>
+                    <li role="separator" class="nav-divider hidden-sm hidden-md hidden-lg"></li>
+                    <p class="navbar-text hidden-sm hidden-md hidden-lg">Signed in as User Name</p>
+                    <li class="hidden-sm hidden-md hidden-lg"><a href="#">Profile</a></li>
+                    <li class="hidden-sm hidden-md hidden-lg active"><a href="#">Dashboard</a></li>
+                    <li class="hidden-sm hidden-md hidden-lg"><a href="#">Projects</a></li>
+                    <li class="hidden-sm hidden-md hidden-lg"><a href="#">...</a></li>
+                    <li class="hidden-sm hidden-md hidden-lg"><a href="#">...</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
-    <header class="jumbotron">
-        <div class="container">
-            <h1>Turn over a new leaf.</h1>
-            <a href="#">Sign up</a>
-        </div>
-    </header>
+    <div class="container-fluid background">
+        <div class="container raised">
+            <div class="row">
+                <div class="col-sm-4 dashboard-menu hidden-xs">
+                    <img src="./img/user.png" alt="User Picture" class="img-circle center-block">
+                    <h3 class="bold-caps">User Name</h3>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation"><a href="#">Profile <i class="fa fa-chevron-right fade-on-hover"></i></a></li>
+                        <li role="presentation" class="active"><a href="#">Dashboard <i class="fa fa-chevron-right fade-on-hover"></i></a></li>
+                        <li role="presentation"><a href="#">Projects <i class="fa fa-chevron-right fade-on-hover"></i></a></li>
+                        <li role="presentation"><a href="#">... <i class="fa fa-chevron-right fade-on-hover"></i></a></li>
+                        <li role="presentation"><a href="#">... <i class="fa fa-chevron-right fade-on-hover"></i></a></li>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 business-bg hidden-xs"></div>
-            <div class="col-sm-4 business-caption">
-                <div>
-                    <h2>You Can Help Nigerian Business</h2>
-                    <p>
-                        Share your skills with growing businesses across Africa using Project Ikeora.
-                    </p>
-                    <a href="#" class="btn btn-success btn-block">Learn More</a>
+                        <!-- This must be here for styling -->
+                        <li class="last"></li>
+                    </ul>
                 </div>
+                <div class="col-sm-8 dashboard-body">
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Welcome to Ikeora!</strong> To get started, ...
+                    </div>
 
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" placeholder="Project Title">
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="button">Create Project</button>
+                        </span>
+                    </div>
+
+                    <h3>Current Projects</h3>
+                    <div class="row">
+                        <div class="col-md-6 project-cell">
+                            <div id="project-3" class="project-height-1" data-toggle="modal" data-target="#projectModal">
+                                <div class="project-text">
+                                    <h3>Project Name</h3>
+                                    <h4>Volunteer Name</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 project-cell">
+                            <div id="project-4" class="project-height-1" data-toggle="modal" data-target="#projectModal">
+                                <div class="project-text">
+                                    <h3>Project Name</h3>
+                                    <h4>Volunteer Name</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <h1>Featured Projects</h1>
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 project-cell">
-                <div id="project-1" class="project-height-1" data-toggle="modal" data-target="#projectModal">
-                    <div class="project-text">
-                        <h3>Project Name</h3>
-                        <h4>Business</h4>
-                        <p>Web Design/Dev</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 project-cell">
-                <div id="project-2" class="project-height-1" data-toggle="modal" data-target="#projectModal">
-                    <div class="project-text">
-                        <h3>Project Name</h3>
-                        <h4>Business</h4>
-                        <p>Web Design/Dev</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 project-cell">
-                <div id="project-3" class="project-height-2" data-toggle="modal" data-target="#projectModal">
-                    <div class="project-text">
-                        <h3>Project Name</h3>
-                        <h4>Business</h4>
-                        <p>Web Design/Dev</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 project-cell">
-                        <div id="project-4" class="project-height-1" data-toggle="modal" data-target="#projectModal">
-                            <div class="project-text">
-                                <h3>Project Name</h3>
-                                <h4>Business</h4>
-                                <p>Web Design/Dev</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 project-cell">
-                        <div id="project-5" class="project-height-1" data-toggle="modal" data-target="#projectModal">
-                            <div class="project-text">
-                                <h3>Project Name</h3>
-                                <h4>Business</h4>
-                                <p>Web Design/Dev</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 project-cell">
-                        <div id="project-6" class="project-height-1" data-toggle="modal" data-target="#projectModal">
-                            <div class="project-text">
-                                <h3>Project Name</h3>
-                                <h4>Business</h4>
-                                <p>Web Design/Dev</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 project-cell">
-                        <div id="project-7" class="project-height-1" data-toggle="modal" data-target="#projectModal">
-                            <div class="project-text">
-                                <h3>Project Name</h3>
-                                <h4>Business</h4>
-                                <p>Web Design/Dev</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="jumbotron">
         <div class="container">
