@@ -267,6 +267,7 @@ footer.jumbotron li > a {
 .dashboard-menu {
   background: #eee;
   padding: 0;
+  box-shadow: 5px 0px 4px #999;
   border-top: 25px solid #eee;
 }
 @media (min-width: 768px) {
@@ -321,7 +322,8 @@ footer.jumbotron li > a {
   opacity: 0;
 }
 .dashboard-body {
-  padding-top: 15px;
+  padding: 10px 25px;
+  padding-top: 24px;
 }
 @media (min-width: 768px) {
   .dashboard-body .search-bar {
