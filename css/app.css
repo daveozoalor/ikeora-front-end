@@ -361,6 +361,69 @@ footer.jumbotron li > a {
   color: white;
 }
 /**
+ * Messages Styling
+ */
+.messages-menu {
+  background: #eee;
+  box-shadow: 5px 0px 4px #999;
+  border-top: 25px solid #eee;
+  padding: 0;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .messages-menu {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+  }
+}
+.messages-menu img {
+  border: 8px solid green;
+}
+.messages-menu h3 {
+  text-align: center;
+}
+.messages-menu .nav li:not(.active):after {
+  content: "";
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  height: 2px;
+  left: 5%;
+  width: 90%;
+}
+.messages-menu .nav li.active + li:after {
+  height: 0;
+}
+.messages-menu .nav li > a {
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+  padding: 30px;
+  transition: all 0.2s ease-in-out;
+}
+.messages-menu .nav li.active > a {
+  background: #fff;
+  border-left: 8px solid green;
+}
+.messages-menu .nav li.active > a:hover {
+  color: black;
+}
+@media (max-width: 768px) {
+  .messages-menu .nav li.last:after {
+    height: 0px;
+  }
+}
+.messages-menu .nav i.fade-on-hover {
+  position: relative;
+  opacity: 0;
+}
+.messages-body {
+  padding-top: 12px;
+}
+footer.messages {
+  margin-top: 0px;
+}
+/**
  * Placeholders
  */
 .placeholder {
