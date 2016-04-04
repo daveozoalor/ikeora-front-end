@@ -329,7 +329,6 @@ footer.jumbotron {
             color: black;
             font-weight: bold;
             padding: 30px;
-            transition: all 0.2s ease-in-out;
         }
 
         li.active > a {
@@ -397,17 +396,33 @@ footer.jumbotron {
 /**
  * Messages Styling
  */
+.menu-toggle {
+    margin-top: -24px;
+}
 .messages-menu {
     .dashboard-menu;
     padding: 0;
     padding-left: 15px;
+
+    small {
+        font-weight: normal;
+        text-transform: none;
+    }
+
+    img.message-portrait {
+        border: none;
+        height: 50px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
 }
 
 .messages-body {
     padding-top: 12px;
 
     .messages-listing {
-        
+        height: 500px;
+        background: red;
     }
 }
 

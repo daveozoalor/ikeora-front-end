@@ -309,7 +309,6 @@ footer.jumbotron li > a {
   color: black;
   font-weight: bold;
   padding: 30px;
-  transition: all 0.2s ease-in-out;
 }
 .dashboard-menu .nav li.active > a {
   background: #fff;
@@ -363,6 +362,9 @@ footer.jumbotron li > a {
 /**
  * Messages Styling
  */
+.menu-toggle {
+  margin-top: -24px;
+}
 .messages-menu {
   background: #eee;
   box-shadow: 5px 0px 4px #999;
@@ -399,7 +401,6 @@ footer.jumbotron li > a {
   color: black;
   font-weight: bold;
   padding: 30px;
-  transition: all 0.2s ease-in-out;
 }
 .messages-menu .nav li.active > a {
   background: #fff;
@@ -417,8 +418,22 @@ footer.jumbotron li > a {
   position: relative;
   opacity: 0;
 }
+.messages-menu small {
+  font-weight: normal;
+  text-transform: none;
+}
+.messages-menu img.message-portrait {
+  border: none;
+  height: 50px;
+  margin-right: 10px;
+  margin-top: -5px;
+}
 .messages-body {
   padding-top: 12px;
+}
+.messages-body .messages-listing {
+  height: 500px;
+  background: red;
 }
 footer.messages {
   margin-top: 0px;

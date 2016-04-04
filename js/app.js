@@ -21,12 +21,4 @@ $(document).ready(function() {
             opacity: '0'
         }, fadeDuration);
     });
-
-    $('.menu-toggle button').click(function() {
-        $(this).toggle();
-        $('.dashboard-body').toggle();
-        $('.dashboard-menu').animate({
-            left: '0px'
-        });
-    })
 });
