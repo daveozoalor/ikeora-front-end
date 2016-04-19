@@ -435,6 +435,11 @@ footer.jumbotron li > a {
   height: 500px;
   background: red;
 }
+@media (min-width: 768px) {
+  .messages-body .messages-listing {
+    height: 600px;
+  }
+}
 footer.messages {
   margin-top: 0px;
 }
