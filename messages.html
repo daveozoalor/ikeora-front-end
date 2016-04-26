@@ -15,6 +15,8 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/app.css">
+    <!-- Custom JS
+    <script src="./js/Firebase.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,6 +24,32 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+
+    <style>
+        body {
+            font-family: 'HelveticaNeue-Light';
+        }
+        .msg {
+            margin: 10px 0;
+            padding: 10px;
+            width: 400px;
+            background-color: #efefef;
+        }
+        #username, #text {
+            margin: 5px 0px;
+        }
+        #post {
+            padding: 0.5em 1em;
+            background-color: #50b1ff;
+            border: none;
+            color: #FFF;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -135,7 +163,93 @@
         <div class="col-sm-8 messages-body">
             <div class="messages-listing">
 
+                <div class="panel panel-default">
+                    <div class="panel-heading">New Message</div>
+                    <div class="panel-body">
+                        <input id="newMessage" type="text" placeholder="Type a message..." style="width: 100%" />
+                        <button id="post">Post</button><br/>
+                    </div>
+                </div>
+
+                <!-- Message list panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">Messages</div>
+                    <div class="panel-body">
+                        <!-- Message list -->
+                        <div id="messageList" class="list-group" style="margin-bottom: 0">
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <script>
+                <!-- Firebase injection-->
+                var ref = new Firebase('https://releafmessagingdemo.firebaseio.com/');
+                var usersRef = ref.child("web/users");
+                var messagesRef = ref.child("web/messages");
+                var textInput = document.querySelector('#newMessage');
+                var postButton = document.querySelector('#post');
+
+                usersRef.set({
+
+                    sundayadeilfa: {
+                        access: "Admin",
+                        full_name: "Sunday Adeilfa",
+                        role: "Engineer",
+                        email: "sundayadelifa@releafgroup.org"
+                    },
+                    patrickalexis: {
+                        access: "Admin",
+                        full_name: "Patrick Alexis@releafgroup.org",
+                        role: "Engineer",
+                        email: "patrickalexis@releafgroup.org"
+                    },
+
+                    isiahudotong: {
+                        access: "Admin",
+                        full_name: "Isiah Udotong",
+                        role: "Partner",
+                        email: "isiahudotong@releafgroup.org"
+                    }
+                });
+
+                var usernameInput = ref.child("web/users/patrickalexis");
+
+
+                /** pushing messages into Firebase database **/
+                postButton.addEventListener("click", function() {
+                    //var msgUser = JSON.parse(usernameInput); //something is up here!!!
+                    var msgText = textInput.value;
+                    messagesRef.push({
+                        author: "Patrick",
+                        text: msgText
+                    });
+                    textInput.value = "";
+                });
+
+                /** Function to add a data listener **/
+                var startListening = function() {
+                    messagesRef.on('child_added', function(snapshot) {
+                        var msg = snapshot.val();
+
+                        var msgUsernameElement = document.createElement("b");
+                        msgUsernameElement.textContent = "Patrick";
+
+                        var msgTextElement = document.createElement("p");
+                        msgTextElement.textContent = msg.text;
+
+                        var msgElement = document.createElement("div");
+                        msgElement.appendChild(msgUsernameElement);
+                        msgElement.appendChild(msgTextElement);
+
+                        msgElement.className = "msg";
+                        document.getElementById("messageList").appendChild(msgElement);
+                    });
+                }
+
+                startListening();
+
+            </script>
             <div class="messages-textarea">
 
             </div>
@@ -172,9 +286,10 @@
         </div>
     </footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins -->
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Include all compiled plugins (below), or include individual files as needed
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <script src="./js/app.js" type="text/javascript"></script>

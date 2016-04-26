@@ -433,7 +433,7 @@ footer.jumbotron li > a {
 }
 .messages-body .messages-listing {
   height: 500px;
-  background: red;
+  background: white;
 }
 @media (min-width: 768px) {
   .messages-body .messages-listing {
