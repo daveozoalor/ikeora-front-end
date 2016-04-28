@@ -51,6 +51,21 @@ body {
 .navbar .navbar-text {
   margin-left: 16px;
 }
+
+/**
+*  panel styling
+*/
+
+.panel {
+    border: 0;
+}
+
+.panel-body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 /**
 * Header styling
 */
@@ -68,6 +83,19 @@ header.jumbotron h1 {
 header.jumbotron a {
   color: white;
 }
+/**
+ column css to allow div to be scrollable
+
+ // Set this height to the appropriate size
+  // Only add scroll to vertical column
+*/
+
+.col-lg-8 {
+    height: 360px;
+    padding-right: 20px;
+}
+
+
 /**
 * Nigerian Business styling
 */
@@ -362,6 +390,13 @@ footer.jumbotron li > a {
 /**
  * Messages Styling
  */
+
+div#messageListHolder{
+    overflow:hidden;
+}
+div#messageList{
+    overflow:auto;
+}
 .menu-toggle {
   margin-top: -24px;
 }

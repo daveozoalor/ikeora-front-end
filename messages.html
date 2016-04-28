@@ -174,9 +174,9 @@
                 <!-- Message list panel -->
                 <div class="panel panel-default">
                     <div class="panel-heading">Messages</div>
-                    <div class="panel-body">
+                    <div class="panel-body" id="messageListHolder">
                         <!-- Message list -->
-                        <div id="messageList" class="list-group" style="margin-bottom: 0">
+                        <div class="col-lg-8" id="messageList" class="list-group" style="margin-bottom: 0;">
                         </div>
                     </div>
                 </div>
@@ -243,7 +243,9 @@
                         msgElement.appendChild(msgTextElement);
 
                         msgElement.className = "msg";
-                        document.getElementById("messageList").appendChild(msgElement);
+                        //prepending messages on top like a stack
+                        var list = document.getElementById("messageList");
+                        list.insertBefore(msgElement, list.childNodes[0]);
                     });
                 }
 
